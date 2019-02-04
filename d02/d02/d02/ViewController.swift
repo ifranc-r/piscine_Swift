@@ -21,11 +21,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return Data.deathdata.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DeathCell")
-        cell?.textLabel?.text = Data.deathdata[indexPath.row].0
-        cell?.detailTextLabel?.text = Data.deathdata[indexPath.row].1.toString(dateFormat: "dd MM yyyy")
-        cell?.detailTextLabel?.text = Data.deathdata[indexPath.row].2
-        return cell!
+        let celldescrib = tableView.dequeueReusableCell(withIdentifier: "describDeath")
+        let DeathCell = tableView.dequeueReusableCell(withIdentifier: "DeathCell") as! DeathTableViewCell
+        celldescrib?.detailTextLabel?.text = Data.deathdata[indexPath.row].2
+        return celldescrib!
     }
 }
 
