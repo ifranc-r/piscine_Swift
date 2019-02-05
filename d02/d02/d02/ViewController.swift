@@ -21,10 +21,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return Data.deathdata.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celldescrib = tableView.dequeueReusableCell(withIdentifier: "describDeath")
         let DeathCell = tableView.dequeueReusableCell(withIdentifier: "DeathCell") as! DeathTableViewCell
-        celldescrib?.detailTextLabel?.text = Data.deathdata[indexPath.row].2
-        return celldescrib!
+        DeathCell.deathguy = Data.deathdata[indexPath.row]
+        return DeathCell
     }
 }
 

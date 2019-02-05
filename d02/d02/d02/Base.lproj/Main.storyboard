@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="elz-vv-b8k">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--DeathNote-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="d02" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,61 +20,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TabDeathNote" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5dW-Th-fVf">
-                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="32" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeathCell" id="q9p-MZ-v0g" customClass="DeathTableViewCell" customModule="d02" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeathCell" rowHeight="90" id="q9p-MZ-v0g" customClass="DeathTableViewCell" customModule="d02" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q9p-MZ-v0g" id="tLO-UW-nVv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of death" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWC-sv-A7B">
-                                                    <rect key="frame" x="255" y="13" width="100" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Death" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWD-l5-zlo">
+                                                    <rect key="frame" x="15" y="18" width="95.5" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="926-i7-caZ"/>
+                                                        <constraint firstAttribute="height" constant="20" id="6zy-lA-3mP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describ" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypF-Ib-Ztr">
+                                                    <rect key="frame" x="15" y="52.5" width="345" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="Exu-kV-M80"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of death" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWC-sv-A7B">
+                                                    <rect key="frame" x="255" y="20" width="100" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="5hf-iK-JCe"/>
+                                                        <constraint firstAttribute="height" constant="20" id="y6y-LL-9pb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Death" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWD-l5-zlo">
-                                                    <rect key="frame" x="15" y="12" width="232" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="eWD-l5-zlo" firstAttribute="centerY" secondItem="tLO-UW-nVv" secondAttribute="centerY" id="VhV-Au-Txe"/>
-                                                <constraint firstItem="xWC-sv-A7B" firstAttribute="centerY" secondItem="tLO-UW-nVv" secondAttribute="centerY" id="cdB-G3-INd"/>
-                                                <constraint firstItem="eWD-l5-zlo" firstAttribute="leading" secondItem="tLO-UW-nVv" secondAttribute="leading" constant="15" id="g7h-Iq-aGk"/>
-                                                <constraint firstAttribute="trailing" secondItem="xWC-sv-A7B" secondAttribute="trailing" constant="20" id="n2H-wR-K6E"/>
-                                                <constraint firstItem="xWC-sv-A7B" firstAttribute="leading" secondItem="eWD-l5-zlo" secondAttribute="trailing" constant="8" symbolic="YES" id="oV0-Ym-Ltq"/>
+                                                <constraint firstItem="ypF-Ib-Ztr" firstAttribute="trailing" secondItem="tLO-UW-nVv" secondAttribute="trailingMargin" id="0EX-6s-MBy"/>
+                                                <constraint firstItem="eWD-l5-zlo" firstAttribute="top" secondItem="tLO-UW-nVv" secondAttribute="top" constant="18" id="Nh0-ke-qiA"/>
+                                                <constraint firstItem="xWC-sv-A7B" firstAttribute="top" secondItem="tLO-UW-nVv" secondAttribute="top" constant="20" id="NnM-9j-hEd"/>
+                                                <constraint firstItem="ypF-Ib-Ztr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xWC-sv-A7B" secondAttribute="bottom" constant="8" symbolic="YES" id="Pei-61-Qug"/>
+                                                <constraint firstItem="eWD-l5-zlo" firstAttribute="leading" secondItem="tLO-UW-nVv" secondAttribute="leading" constant="15" id="RvV-RY-eMU"/>
+                                                <constraint firstItem="ypF-Ib-Ztr" firstAttribute="leading" secondItem="tLO-UW-nVv" secondAttribute="leadingMargin" id="aYh-lQ-BJY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ypF-Ib-Ztr" secondAttribute="bottom" constant="6" id="mLq-1w-NWQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="xWC-sv-A7B" secondAttribute="trailing" constant="20" id="rQf-7Y-9lQ"/>
+                                                <constraint firstItem="xWC-sv-A7B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eWD-l5-zlo" secondAttribute="trailing" constant="8" symbolic="YES" id="rvm-o1-Nrm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="DescribDeath" destination="ypF-Ib-Ztr" id="TSE-JU-Fka"/>
                                             <outlet property="NameDeathLabel" destination="eWD-l5-zlo" id="JnZ-eL-y44"/>
                                             <outlet property="dateLabel" destination="xWC-sv-A7B" id="QPS-Tq-k6V"/>
                                         </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="describDeath" textLabel="9qu-WL-0lY" style="IBUITableViewCellStyleDefault" id="rd1-h5-5d1">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rd1-h5-5d1" id="m5l-KK-gMe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Describ death" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9qu-WL-0lY">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -87,13 +89,53 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="DeathNote" id="Z03-yb-Mrk" userLabel="Viewcontroleur">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sd4-oZ-9YJ">
+                            <connections>
+                                <segue destination="sOU-7P-3oR" kind="show" id="18m-oX-p3s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="TabDeathNote" destination="5dW-Th-fVf" id="H1v-zj-75Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424.5" y="115.5"/>
+            <point key="canvasLocation" x="762.39999999999998" y="114.69265367316342"/>
+        </scene>
+        <!--Add New Death-->
+        <scene sceneID="Xah-ia-OV3">
+            <objects>
+                <viewController title="Add New Death" id="sOU-7P-3oR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x48-7H-F8B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="qpL-t4-3Fg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vNr-IY-NQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RQb-6Z-fnt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="elz-vv-b8k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NpP-8k-2hz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4cB-7t-k0c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7i-QS-Cx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="115"/>
         </scene>
     </scenes>
 </document>

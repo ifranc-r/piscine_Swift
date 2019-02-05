@@ -11,13 +11,16 @@ import UIKit
 class DeathTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var NameDeathLabel: UILabel!
+    @IBOutlet weak var DescribDeath: UILabel!
     
     var deathguy : (String, Date, String)? {
         didSet {
             if let tmp = deathguy {
                 NameDeathLabel?.text = tmp.0
                 dateLabel?.text = tmp.1.toString(dateFormat: "dd MM yyyy")
+                DescribDeath?.text = tmp.2
             }
         }
     }
+    
 }
