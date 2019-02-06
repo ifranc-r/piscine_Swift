@@ -107,7 +107,7 @@
         <!--Add New Death-->
         <scene sceneID="Xah-ia-OV3">
             <objects>
-                <viewController title="Add New Death" id="sOU-7P-3oR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addPerson" title="Add New Death" id="sOU-7P-3oR" customClass="AddViewController" customModule="d02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x48-7H-F8B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,36 +131,42 @@
                                     <!--2019-02-06 14:40:33 +0000-->
                                 </date>
                             </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t08-Vv-FSH">
-                                <rect key="frame" x="20" y="361" width="335" height="286"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jpd-Sp-CMQ">
+                                <rect key="frame" x="20" y="367" width="335" height="280"/>
                                 <color key="backgroundColor" red="0.75048575129999995" green="0.75048575129999995" blue="0.75048575129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qpL-t4-3Fg" firstAttribute="trailing" secondItem="0oK-qx-0yd" secondAttribute="trailing" constant="40" id="0L2-QL-Mb7"/>
-                            <constraint firstItem="qpL-t4-3Fg" firstAttribute="trailing" secondItem="t08-Vv-FSH" secondAttribute="trailing" constant="20" id="2Im-Gn-EL1"/>
-                            <constraint firstItem="t08-Vv-FSH" firstAttribute="leading" secondItem="qpL-t4-3Fg" secondAttribute="leading" constant="20" id="5I0-dp-A91"/>
+                            <constraint firstItem="qpL-t4-3Fg" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0oK-qx-0yd" secondAttribute="trailing" constant="40" id="0L2-QL-Mb7"/>
+                            <constraint firstItem="jpd-Sp-CMQ" firstAttribute="top" secondItem="vGs-Fs-bwE" secondAttribute="bottom" constant="20" id="3mF-YH-e9O"/>
                             <constraint firstItem="vGs-Fs-bwE" firstAttribute="top" secondItem="0oK-qx-0yd" secondAttribute="bottom" constant="5" id="5aq-S0-xvf"/>
-                            <constraint firstItem="t08-Vv-FSH" firstAttribute="top" secondItem="vGs-Fs-bwE" secondAttribute="bottom" constant="14" id="7gJ-Pi-tiI"/>
+                            <constraint firstItem="qpL-t4-3Fg" firstAttribute="bottom" secondItem="jpd-Sp-CMQ" secondAttribute="bottom" constant="20" id="Fjl-oq-K6a"/>
                             <constraint firstItem="0oK-qx-0yd" firstAttribute="centerX" secondItem="qpL-t4-3Fg" secondAttribute="centerX" id="Vbf-ab-B7g"/>
-                            <constraint firstItem="t08-Vv-FSH" firstAttribute="centerX" secondItem="qpL-t4-3Fg" secondAttribute="centerX" id="Z9T-zU-7FV"/>
                             <constraint firstItem="vGs-Fs-bwE" firstAttribute="leading" secondItem="qpL-t4-3Fg" secondAttribute="leading" id="gL9-rc-LhL"/>
+                            <constraint firstItem="jpd-Sp-CMQ" firstAttribute="leading" secondItem="qpL-t4-3Fg" secondAttribute="leading" constant="20" id="gtZ-9J-xZ2"/>
                             <constraint firstItem="0oK-qx-0yd" firstAttribute="top" secondItem="qpL-t4-3Fg" secondAttribute="top" constant="27" id="j9F-or-NQe"/>
-                            <constraint firstItem="0oK-qx-0yd" firstAttribute="leading" secondItem="qpL-t4-3Fg" secondAttribute="leading" constant="40" id="nJu-6P-ZeQ"/>
-                            <constraint firstItem="qpL-t4-3Fg" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="t08-Vv-FSH" secondAttribute="bottom" constant="20" id="pTN-h6-lLa"/>
+                            <constraint firstItem="0oK-qx-0yd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="qpL-t4-3Fg" secondAttribute="leading" constant="40" id="nJu-6P-ZeQ"/>
                             <constraint firstItem="vGs-Fs-bwE" firstAttribute="centerX" secondItem="qpL-t4-3Fg" secondAttribute="centerX" id="pYP-cE-ymB"/>
+                            <constraint firstItem="jpd-Sp-CMQ" firstAttribute="centerX" secondItem="x48-7H-F8B" secondAttribute="centerX" id="ruu-dd-D5S"/>
+                            <constraint firstItem="qpL-t4-3Fg" firstAttribute="trailing" secondItem="jpd-Sp-CMQ" secondAttribute="trailing" constant="20" id="yF3-8f-KdI"/>
                             <constraint firstItem="qpL-t4-3Fg" firstAttribute="trailing" secondItem="vGs-Fs-bwE" secondAttribute="trailing" id="ylV-b0-aTO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qpL-t4-3Fg"/>
                     </view>
+                    <connections>
+                        <outlet property="DatePieker" destination="vGs-Fs-bwE" id="10T-fn-mAC"/>
+                        <outlet property="DescribTextView" destination="jpd-Sp-CMQ" id="Q3x-jZ-jg0"/>
+                        <outlet property="NameTextField" destination="0oK-qx-0yd" id="PBv-ER-BK5"/>
+                        <segue destination="h49-yX-hMJ" kind="unwind" identifier="addPerson" unwindAction="unWindSegueWithSegue:" id="f2L-92-Eb2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNr-IY-NQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="h49-yX-hMJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1592.8" y="114.69265367316342"/>
+            <point key="canvasLocation" x="1870" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RQb-6Z-fnt">

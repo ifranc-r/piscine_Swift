@@ -17,7 +17,7 @@ class DeathTableViewCell: UITableViewCell {
         didSet {
             if let tmp = deathguy {
                 NameDeathLabel?.text = tmp.0
-                dateLabel?.text = tmp.1.toString(dateFormat: "dd MM yyyy")
+                dateLabel?.text = tmp.1.toString(dateFormat: "d MMMM yyyy HH:mm:ss")
                 DescribDeath?.text = tmp.2
             }
         }

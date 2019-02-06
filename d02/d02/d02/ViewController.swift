@@ -16,14 +16,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             TabDeathNote.dataSource = self
         }
     }
+    var deathdata : [(String, Date, String)] = Data.deathdata
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Data.deathdata.count
+        return deathdata.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let DeathCell = tableView.dequeueReusableCell(withIdentifier: "DeathCell") as! DeathTableViewCell
-        DeathCell.deathguy = Data.deathdata[indexPath.row]
+        DeathCell.deathguy = self.deathdata[indexPath.row]
         return DeathCell
+    }
+    @IBAction func unWindSegue(segue: UIStoryboardSegue) {
+        if segue.identifier == "addPerson"{
+            print(segue.identifier!)
+            self.TabDeathNote?.reloadData()
+        }
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }
 
