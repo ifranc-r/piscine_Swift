@@ -25,7 +25,9 @@ class AddViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addPerson"{
             if let vc = segue.destination as? ViewController{
-                vc.deathdata.insert(((NameTextField?.text)!, DatePieker.date, (DescribTextView?.text)!), at:0)
+                if (NameTextField?.text != ""){
+                    vc.deathdata.insert(((NameTextField?.text)!, DatePieker.date, (DescribTextView?.text)!), at:0)
+                }
                 print(NameTextField?.text ?? "nothing")
                 print(DatePieker.toString(dateFormat:"d MMMM yyyy HH:mm:ss"))
                 print(DescribTextView?.text ?? "")

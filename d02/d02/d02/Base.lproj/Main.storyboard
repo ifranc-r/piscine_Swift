@@ -120,7 +120,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vGs-Fs-bwE">
                                 <rect key="frame" x="0.0" y="131" width="375" height="216"/>
@@ -166,7 +166,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNr-IY-NQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="h49-yX-hMJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="115"/>
+            <point key="canvasLocation" x="2116" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RQb-6Z-fnt">
