@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,24 +20,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="CollectionView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RA8-YP-OsK">
-                                <rect key="frame" x="-0.5" y="32" width="375" height="667"/>
+                                <rect key="frame" x="0.5" y="32" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yyv-NQ-i0P">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="170" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Collectcell" id="fcY-iw-Oid">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Collectcell" id="fcY-iw-Oid" customClass="CollectionViewCell" customModule="d03" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YzD-I0-Gcz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-LW-jIj">
+                                                    <rect key="frame" x="58" y="58" width="54" height="54"/>
+                                                </activityIndicatorView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Mbg-LW-jIj" secondAttribute="trailing" constant="50" id="2hY-NO-IgR"/>
+                                            <constraint firstItem="Mbg-LW-jIj" firstAttribute="centerY" secondItem="fcY-iw-Oid" secondAttribute="centerY" id="4rD-Mp-U09"/>
+                                            <constraint firstItem="YzD-I0-Gcz" firstAttribute="centerY" secondItem="fcY-iw-Oid" secondAttribute="centerY" id="Azx-vc-kEl"/>
+                                            <constraint firstItem="Mbg-LW-jIj" firstAttribute="centerX" secondItem="fcY-iw-Oid" secondAttribute="centerX" id="CzB-eU-Kbi"/>
+                                            <constraint firstItem="Mbg-LW-jIj" firstAttribute="top" secondItem="fcY-iw-Oid" secondAttribute="topMargin" constant="50" id="DCX-1I-Y06"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Mbg-LW-jIj" secondAttribute="bottom" constant="50" id="Wqw-At-qeS"/>
+                                            <constraint firstItem="Mbg-LW-jIj" firstAttribute="leading" secondItem="fcY-iw-Oid" secondAttribute="leadingMargin" constant="50" id="YV4-Uq-onc"/>
+                                            <constraint firstItem="YzD-I0-Gcz" firstAttribute="centerX" secondItem="fcY-iw-Oid" secondAttribute="centerX" id="gTo-Kd-pD7"/>
+                                            <constraint firstAttribute="bottom" secondItem="YzD-I0-Gcz" secondAttribute="bottom" id="inz-t5-2Ih"/>
+                                            <constraint firstAttribute="trailing" secondItem="YzD-I0-Gcz" secondAttribute="trailing" id="nYS-V5-Ja4"/>
+                                            <constraint firstItem="YzD-I0-Gcz" firstAttribute="leading" secondItem="fcY-iw-Oid" secondAttribute="leading" id="qbg-ud-YcL"/>
+                                            <constraint firstItem="YzD-I0-Gcz" firstAttribute="top" secondItem="fcY-iw-Oid" secondAttribute="top" id="zbU-j8-Uwb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="ImageView" destination="YzD-I0-Gcz" id="NmI-ZC-2tr"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="IyE-Wf-GUp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="O3r-ax-bid"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,9 +79,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Images" id="JZS-8Y-6hE"/>
-                    <connections>
-                        <outlet property="CollectionView" destination="RA8-YP-OsK" id="PhR-P3-GtH"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
