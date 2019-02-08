@@ -60,6 +60,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="ImageView" destination="YzD-I0-Gcz" id="NmI-ZC-2tr"/>
+                                            <outlet property="loader" destination="Mbg-LW-jIj" id="pQp-Xw-Ve4"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
