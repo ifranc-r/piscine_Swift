@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate {
-    let urls = ["https://images-assets.nasa.gov/image/ARC-2006-ACD06-0145-065/ARC-2006-ACD06-0145-065~orig.jpg", "https://images-assets.nasa.gov/image/PIA15415/PIA15415~orig.jpg", "https://images-assets.nasa.gov/image/PIA17563/PIA17563~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg" ]
+    let urls = ["https://images-assets.nasa.gov/image/ARC-2006-ACD06-0145-065/ARC-2006-ACD06-0145-065~orig.jpg", "https://images-assets.nasa.gov/image/PIA15415/PIA15415~orig.jpg", "https://images-assets.nasa.gov/image/PIA17563/PIA17563~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~orig.jpg", "https://images-assets.nasa.gov/image/PIA16008/PIA16008~or" ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +35,15 @@ class ViewController: UIViewController, UICollectionViewDataSource,UICollectionV
                 cell.loader.stopAnimating()
                 cell.loader.hidesWhenStopped = true
                 cell.ImageView.image = UIImage(data: data)
+                if cell.ImageView.image == nil {
+                    let alertController = UIAlertController(title: "Error", message: "Cannot acces to \(url.absoluteString)", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                    cell.layer.borderColor = (UIColor.red.cgColor)
+                    cell.layer.backgroundColor = (UIColor.red.cgColor)
+                }
             }
         }).resume()
-        cell.ImageView.image = UIColor.white.image()
         cell.loader.startAnimating()
         cell.loader.hidesWhenStopped = false
         cell.layer.backgroundColor = (UIColor.white.cgColor)
