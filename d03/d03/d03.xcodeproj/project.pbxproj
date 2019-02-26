@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7738FBFE22258FA9000730D0 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FBFD22258FA9000730D0 /* ScrollView.swift */; };
 		7753FD6D220D9D4300C1EFCC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7753FD6C220D9D4300C1EFCC /* CollectionViewCell.swift */; };
 		7753FD6F220DB5DE00C1EFCC /* extension_UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7753FD6E220DB5DE00C1EFCC /* extension_UIImageView.swift */; };
 		778E2657220CAAEB000262DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778E2656220CAAEB000262DE /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7738FBFD22258FA9000730D0 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		7753FD6C220D9D4300C1EFCC /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		7753FD6E220DB5DE00C1EFCC /* extension_UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension_UIImageView.swift; sourceTree = "<group>"; };
 		778E2653220CAAEB000262DE /* d03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = d03.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 				778E2662220CAAEB000262DE /* Info.plist */,
 				7753FD6C220D9D4300C1EFCC /* CollectionViewCell.swift */,
 				7753FD6E220DB5DE00C1EFCC /* extension_UIImageView.swift */,
+				7738FBFD22258FA9000730D0 /* ScrollView.swift */,
 			);
 			path = d03;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				778E2659220CAAEB000262DE /* ViewController.swift in Sources */,
 				778E2657220CAAEB000262DE /* AppDelegate.swift in Sources */,
 				7753FD6F220DB5DE00C1EFCC /* extension_UIImageView.swift in Sources */,
+				7738FBFE22258FA9000730D0 /* ScrollView.swift in Sources */,
 				7753FD6D220D9D4300C1EFCC /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -50,8 +50,23 @@ class ViewController: UIViewController, UICollectionViewDataSource,UICollectionV
         cell.layer.borderColor = (UIColor.black.cgColor)
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "IdentifierCell"{
+            let seq = segue.destination as! ScrollView
+            let cell = sender as! CollectionViewCell
+            if cell.ImageView.image != nil {
+                seq.Image = cell.ImageView.image!
+            } else {
+                let alertController = UIAlertController(title: "Error", message: "Cannot acces to this image", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
     }
 }
 

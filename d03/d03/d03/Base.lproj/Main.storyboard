@@ -61,6 +61,7 @@
                                         <connections>
                                             <outlet property="ImageView" destination="YzD-I0-Gcz" id="NmI-ZC-2tr"/>
                                             <outlet property="loader" destination="Mbg-LW-jIj" id="pQp-Xw-Ve4"/>
+                                            <segue destination="slQ-wr-qtM" kind="show" identifier="IdentifierCell" id="cqR-ir-vhK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -84,6 +85,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Scroll View-->
+        <scene sceneID="mVg-zy-8Zf">
+            <objects>
+                <viewController id="slQ-wr-qtM" customClass="ScrollView" customModule="d03" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mAe-PL-ggB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlC-s3-2m6">
+                                <rect key="frame" x="-0.5" y="32" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="slQ-wr-qtM" id="yX8-lg-Lg1"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tlC-s3-2m6" firstAttribute="height" secondItem="mAe-PL-ggB" secondAttribute="height" id="4qE-ZK-7gb"/>
+                            <constraint firstItem="tlC-s3-2m6" firstAttribute="centerY" secondItem="MCT-e2-p4V" secondAttribute="centerY" id="CT1-r8-Ty0"/>
+                            <constraint firstItem="tlC-s3-2m6" firstAttribute="width" secondItem="mAe-PL-ggB" secondAttribute="width" id="aGE-ku-i1W"/>
+                            <constraint firstItem="tlC-s3-2m6" firstAttribute="centerX" secondItem="MCT-e2-p4V" secondAttribute="centerX" id="gYw-D6-gfT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MCT-e2-p4V"/>
+                    </view>
+                    <connections>
+                        <outlet property="ScrollView" destination="tlC-s3-2m6" id="Jqj-R7-rAJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyn-pV-UlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n5V-1s-AoF">
