@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="b43-hg-8pj">
             <objects>
                 <viewController id="8bP-JH-pvd" sceneMemberID="viewController">
@@ -20,27 +20,49 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Ym8-P6-F8e"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="uau-dZ-a6m"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="uau-dZ-a6m"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umH-og-khE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="465" y="396"/>
         </scene>
-        <!--Item 1-->
+        <!--View Controller-->
         <scene sceneID="Ibm-UI-ubw">
             <objects>
                 <viewController id="als-qC-EXH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ya8-sP-DdN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Mt-H2-nDX">
+                                <rect key="frame" x="-0.5" y="-14.5" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IdCell" id="gx0-zm-n5Y">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gx0-zm-n5Y" id="dBt-oA-xsq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Mt-H2-nDX" firstAttribute="width" secondItem="Ya8-sP-DdN" secondAttribute="width" id="EHa-Ia-umx"/>
+                            <constraint firstItem="8Mt-H2-nDX" firstAttribute="height" secondItem="Ya8-sP-DdN" secondAttribute="height" id="PjU-fv-Wra"/>
+                            <constraint firstItem="8Mt-H2-nDX" firstAttribute="centerX" secondItem="mjm-Al-W5g" secondAttribute="centerX" id="RDm-RT-ws2"/>
+                            <constraint firstItem="8Mt-H2-nDX" firstAttribute="centerY" secondItem="mjm-Al-W5g" secondAttribute="centerY" id="wHT-IS-Urx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mjm-Al-W5g"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="2hA-fW-HMn"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="2hA-fW-HMn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o89-rv-bHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="-274"/>
+            <point key="canvasLocation" x="464.80000000000001" y="-274.81259370314842"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yT4-hH-uPZ">
