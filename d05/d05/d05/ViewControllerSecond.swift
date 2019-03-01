@@ -14,20 +14,37 @@ class ViewControllerSecond: UIViewController, MKMapViewDelegate, CLLocationManag
 
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 100
     var initialLocation = CLLocation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialLocation = CLLocation(latitude: 48.8918717, longitude: 2.3216461)
+        initialLocation = CLLocation(latitude: 48.896734, longitude: 2.318469)
         centerMapOnLocation(location: initialLocation)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 48.896734, longitude: 2.318469)
+        annotation.title = "ecole 42"
+        annotation.subtitle = "One day I'll go here..."
+        mapView.addAnnotation(annotation)
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func SegmetedControlEvent(_ sender: UISegmentedControl) {
+        if (sender.selectedSegmentIndex == 0) {
+            mapView.mapType = .standard
+        }
+        else if (sender.selectedSegmentIndex == 1) {
+            mapView.mapType = .satellite
+        }
+        else {
+            mapView.mapType = .hybrid
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)

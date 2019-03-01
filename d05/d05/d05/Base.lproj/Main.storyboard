@@ -24,6 +24,22 @@
                                     <outlet property="delegate" destination="8bP-JH-pvd" id="ASh-dh-r5O"/>
                                 </connections>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vQQ-mR-644">
+                                <rect key="frame" x="81" y="568" width="212" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2dl-A5-Tgf"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="zz0-Ed-6lH"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satelite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegmetedControlEvent:" destination="8bP-JH-pvd" eventType="valueChanged" id="8Id-Os-Ryc"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -31,6 +47,8 @@
                             <constraint firstItem="Ym8-P6-F8e" firstAttribute="bottom" secondItem="RuG-uh-rN0" secondAttribute="bottom" id="4AA-F4-T5G"/>
                             <constraint firstItem="Ym8-P6-F8e" firstAttribute="bottom" secondItem="RuG-uh-rN0" secondAttribute="bottom" id="5Yi-PV-wyJ"/>
                             <constraint firstItem="RuG-uh-rN0" firstAttribute="leading" secondItem="Ym8-P6-F8e" secondAttribute="leading" id="GHX-fG-IVI"/>
+                            <constraint firstItem="Ym8-P6-F8e" firstAttribute="bottom" secondItem="vQQ-mR-644" secondAttribute="bottom" constant="20" id="Pbm-Nf-kFb"/>
+                            <constraint firstItem="vQQ-mR-644" firstAttribute="centerX" secondItem="jU8-4T-EKz" secondAttribute="centerX" id="ZCB-et-g6o"/>
                             <constraint firstItem="RuG-uh-rN0" firstAttribute="top" secondItem="Ym8-P6-F8e" secondAttribute="top" id="hKO-xc-Cmh"/>
                             <constraint firstItem="RuG-uh-rN0" firstAttribute="top" secondItem="Ym8-P6-F8e" secondAttribute="top" id="kfE-FV-Yl3"/>
                         </constraints>
@@ -43,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umH-og-khE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="396"/>
+            <point key="canvasLocation" x="464.80000000000001" y="394.45277361319341"/>
         </scene>
         <!--View Controller First-->
         <scene sceneID="Ibm-UI-ubw">

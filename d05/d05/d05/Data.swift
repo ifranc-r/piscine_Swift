@@ -11,7 +11,7 @@ import Foundation
 
 struct Data {
     static var locations : [(Double, Double, String, String)] =
-    [(48.8918717, 2.3216461, "Ecole 42", "France"),
+    [(48.896734, 2.318469, "Ecole 42", "France"),
      (40.856061, 14.246392, "Pizzaria Starita", "Naples"),
      (18.792020, 98.951796, "Pirate Drink", "Chiang Mai")
     ]
