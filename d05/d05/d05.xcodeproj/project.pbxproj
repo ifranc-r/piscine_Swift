@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7735D92122297D3B000AA45B /* gps (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 7735D92022297D3B000AA45B /* gps (1).png */; };
+		7735D92422297DAD000AA45B /* location-on-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 7735D92222297DAD000AA45B /* location-on-map.png */; };
+		7735D92522297DAD000AA45B /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 7735D92322297DAD000AA45B /* list.png */; };
 		7747CA5A2226EC3700417585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747CA592226EC3700417585 /* AppDelegate.swift */; };
 		7747CA5F2226EC3700417585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7747CA5D2226EC3700417585 /* Main.storyboard */; };
 		7747CA612226EC3700417585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7747CA602226EC3700417585 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7735D92022297D3B000AA45B /* gps (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gps (1).png"; path = "../../../../../../../../Users/ifranc-r/Downloads/gps (1).png"; sourceTree = "<group>"; };
+		7735D92222297DAD000AA45B /* location-on-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "location-on-map.png"; path = "../../../../../../../../Users/ifranc-r/Downloads/location-on-map.png"; sourceTree = "<group>"; };
+		7735D92322297DAD000AA45B /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = list.png; path = "../../../../../../../../Users/ifranc-r/Downloads/list.png"; sourceTree = "<group>"; };
 		7747CA562226EC3700417585 /* d05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = d05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7747CA592226EC3700417585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7747CA5E2226EC3700417585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 		7747CA582226EC3700417585 /* d05 */ = {
 			isa = PBXGroup;
 			children = (
+				7735D92322297DAD000AA45B /* list.png */,
+				7735D92222297DAD000AA45B /* location-on-map.png */,
+				7735D92022297D3B000AA45B /* gps (1).png */,
 				7747CA592226EC3700417585 /* AppDelegate.swift */,
 				7747CA5D2226EC3700417585 /* Main.storyboard */,
 				7747CA602226EC3700417585 /* Assets.xcassets */,
@@ -134,7 +143,10 @@
 			files = (
 				7747CA642226EC3700417585 /* LaunchScreen.storyboard in Resources */,
 				7747CA612226EC3700417585 /* Assets.xcassets in Resources */,
+				7735D92422297DAD000AA45B /* location-on-map.png in Resources */,
+				7735D92122297D3B000AA45B /* gps (1).png in Resources */,
 				7747CA5F2226EC3700417585 /* Main.storyboard in Resources */,
+				7735D92522297DAD000AA45B /* list.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

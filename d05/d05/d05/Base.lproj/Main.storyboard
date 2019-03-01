@@ -40,21 +40,34 @@
                                     <action selector="SegmetedControlEvent:" destination="8bP-JH-pvd" eventType="valueChanged" id="8Id-Os-Ryc"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKc-mY-q5q">
+                                <rect key="frame" x="313" y="568" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="NDT-uP-iHn"/>
+                                    <constraint firstAttribute="height" constant="30" id="htL-lo-5RA"/>
+                                </constraints>
+                                <state key="normal" image="gps (1).png"/>
+                                <connections>
+                                    <action selector="GeoLocalisationButton:" destination="8bP-JH-pvd" eventType="touchUpInside" id="Hf8-cf-gne"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ym8-P6-F8e" firstAttribute="trailing" secondItem="RuG-uh-rN0" secondAttribute="trailing" id="2Ld-xf-0jW"/>
                             <constraint firstItem="Ym8-P6-F8e" firstAttribute="bottom" secondItem="RuG-uh-rN0" secondAttribute="bottom" id="4AA-F4-T5G"/>
                             <constraint firstItem="Ym8-P6-F8e" firstAttribute="bottom" secondItem="RuG-uh-rN0" secondAttribute="bottom" id="5Yi-PV-wyJ"/>
+                            <constraint firstItem="nKc-mY-q5q" firstAttribute="leading" secondItem="vQQ-mR-644" secondAttribute="trailing" constant="20" id="FT9-xs-OGC"/>
                             <constraint firstItem="RuG-uh-rN0" firstAttribute="leading" secondItem="Ym8-P6-F8e" secondAttribute="leading" id="GHX-fG-IVI"/>
                             <constraint firstItem="Ym8-P6-F8e" firstAttribute="bottom" secondItem="vQQ-mR-644" secondAttribute="bottom" constant="20" id="Pbm-Nf-kFb"/>
+                            <constraint firstItem="Ym8-P6-F8e" firstAttribute="bottom" secondItem="nKc-mY-q5q" secondAttribute="bottom" constant="20" id="TLR-VB-Zxh"/>
                             <constraint firstItem="vQQ-mR-644" firstAttribute="centerX" secondItem="jU8-4T-EKz" secondAttribute="centerX" id="ZCB-et-g6o"/>
                             <constraint firstItem="RuG-uh-rN0" firstAttribute="top" secondItem="Ym8-P6-F8e" secondAttribute="top" id="hKO-xc-Cmh"/>
                             <constraint firstItem="RuG-uh-rN0" firstAttribute="top" secondItem="Ym8-P6-F8e" secondAttribute="top" id="kfE-FV-Yl3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ym8-P6-F8e"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="uau-dZ-a6m"/>
+                    <tabBarItem key="tabBarItem" selectedImage="location-on-map.png" id="uau-dZ-a6m"/>
                     <connections>
                         <outlet property="mapView" destination="RuG-uh-rN0" id="rLH-Gd-ZQz"/>
                     </connections>
@@ -119,7 +132,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mjm-Al-W5g"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="2hA-fW-HMn"/>
+                    <tabBarItem key="tabBarItem" selectedImage="list.png" id="2hA-fW-HMn"/>
                     <connections>
                         <outlet property="TableView" destination="8Mt-H2-nDX" id="88w-ep-YJF"/>
                     </connections>
@@ -147,4 +160,9 @@
             <point key="canvasLocation" x="-506" y="45"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gps (1).png" width="24" height="24"/>
+        <image name="list.png" width="32" height="32"/>
+        <image name="location-on-map.png" width="32" height="32"/>
+    </resources>
 </document>

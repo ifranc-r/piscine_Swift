@@ -26,6 +26,11 @@ class ViewControllerSecond: UIViewController, MKMapViewDelegate, CLLocationManag
         annotation.title = "ecole 42"
         annotation.subtitle = "One day I'll go here..."
         mapView.addAnnotation(annotation)
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.distanceFilter =  10
+        locationManager.startUpdatingLocation()
         // Do any additional setup after loading the view.
     }
 
@@ -43,6 +48,12 @@ class ViewControllerSecond: UIViewController, MKMapViewDelegate, CLLocationManag
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func GeoLocalisationButton(_ sender: UIButton) {
+        let coordinates = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
+        let region = MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        mapView.setRegion(region, animated: true)
     }
     
     func centerMapOnLocation(location: CLLocation) {
