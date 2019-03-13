@@ -7,12 +7,13 @@
 //
 
 import Foundation
-
+import UIKit
+import MapKit
 
 struct Data {
-    static var locations : [(Double, Double, String, String)] =
-    [(48.896734, 2.318469, "Ecole 42", "France"),
-     (40.856061, 14.246392, "Pizzaria Starita", "Naples"),
-     (18.792020, 98.951796, "Pirate Drink", "Chiang Mai")
+    static var locations : [(Double, Double, String, String, UIColor)] =
+    [(48.896734, 2.318469, "Ecole 42", "One day I'll go here...", .blue),
+     (40.856061, 14.246392, "Pizzaria Starita", "Best of pizzaaaa !!!!", .green),
+     (18.792020, 98.951796, "Pirate Drink", "Chill student coffee", .yellow)
     ]
 }

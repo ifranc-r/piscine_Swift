@@ -12,7 +12,7 @@ class CustumCell: UITableViewCell {
 
     @IBOutlet weak var Label: UILabel!
     
-    var location : (Double, Double, String, String)? {
+    var location : (Double, Double, String, String, UIColor)? {
         didSet {
             if let l = location {
                 Label?.text = l.2

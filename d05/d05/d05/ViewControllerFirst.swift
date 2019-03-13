@@ -14,7 +14,6 @@ class ViewControllerFirst: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -32,7 +31,14 @@ class ViewControllerFirst: UIViewController, UITableViewDelegate, UITableViewDat
         cell.location = Data.locations[indexPath.row]
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
-        
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(Data.locations[indexPath.row].2)
+        let tab = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarControllerCustum
+        tab.selectedIndex = 1
+        let vcSecond = tab.viewControllers![1] as! ViewControllerSecond
+        vcSecond.select_annotation(index: indexPath.row)
+        present(tab, animated: true, completion: nil)
     }
 }

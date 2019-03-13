@@ -13,7 +13,7 @@
         <!--View Controller Second-->
         <scene sceneID="b43-hg-8pj">
             <objects>
-                <viewController id="8bP-JH-pvd" customClass="ViewControllerSecond" customModule="d05" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVw" id="8bP-JH-pvd" customClass="ViewControllerSecond" customModule="d05" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jU8-4T-EKz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
         <!--View Controller First-->
         <scene sceneID="Ibm-UI-ubw">
             <objects>
-                <viewController id="als-qC-EXH" customClass="ViewControllerFirst" customModule="d05" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstVw" id="als-qC-EXH" customClass="ViewControllerFirst" customModule="d05" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ya8-sP-DdN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,12 +139,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o89-rv-bHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464.80000000000001" y="-274.81259370314842"/>
+            <point key="canvasLocation" x="465" y="-335"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar Controller Custum-->
         <scene sceneID="yT4-hH-uPZ">
             <objects>
-                <tabBarController id="SzD-3G-gW9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="SzD-3G-gW9" customClass="TabBarControllerCustum" customModule="d05" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LT2-vE-HUk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -157,7 +157,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzO-4O-cvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-506" y="45"/>
+            <point key="canvasLocation" x="-644" y="23"/>
         </scene>
     </scenes>
     <resources>
