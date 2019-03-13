@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="width" constant="30" id="NDT-uP-iHn"/>
                                     <constraint firstAttribute="height" constant="30" id="htL-lo-5RA"/>
                                 </constraints>
-                                <state key="normal" image="gps (1).png"/>
+                                <state key="normal" image="gps (1)"/>
                                 <connections>
                                     <action selector="GeoLocalisationButton:" destination="8bP-JH-pvd" eventType="touchUpInside" id="Hf8-cf-gne"/>
                                 </connections>
@@ -67,7 +67,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ym8-P6-F8e"/>
                     </view>
-                    <tabBarItem key="tabBarItem" selectedImage="location-on-map.png" id="uau-dZ-a6m"/>
+                    <tabBarItem key="tabBarItem" image="location-on-map" landscapeImage="location-on-map" selectedImage="location-on-map" id="uau-dZ-a6m"/>
                     <connections>
                         <outlet property="mapView" destination="RuG-uh-rN0" id="rLH-Gd-ZQz"/>
                     </connections>
@@ -132,7 +132,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mjm-Al-W5g"/>
                     </view>
-                    <tabBarItem key="tabBarItem" selectedImage="list.png" id="2hA-fW-HMn"/>
+                    <tabBarItem key="tabBarItem" image="list" landscapeImage="list" selectedImage="list" id="2hA-fW-HMn"/>
                     <connections>
                         <outlet property="TableView" destination="8Mt-H2-nDX" id="88w-ep-YJF"/>
                     </connections>
@@ -161,8 +161,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gps (1).png" width="24" height="24"/>
-        <image name="list.png" width="32" height="32"/>
-        <image name="location-on-map.png" width="32" height="32"/>
+        <image name="gps (1)" width="24" height="24"/>
+        <image name="list" width="32" height="32"/>
+        <image name="location-on-map" width="32" height="32"/>
     </resources>
 </document>
