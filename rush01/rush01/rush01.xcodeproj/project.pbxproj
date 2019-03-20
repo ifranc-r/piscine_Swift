@@ -12,9 +12,12 @@
 		77CA82B9224260490093F599 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CA82B7224260490093F599 /* Main.storyboard */; };
 		77CA82BB224260490093F599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77CA82BA224260490093F599 /* Assets.xcassets */; };
 		77CA82BE224260490093F599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CA82BC224260490093F599 /* LaunchScreen.storyboard */; };
+		E08A8F4A7EC347B09AEBE5E7 /* Pods_rush01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5114A68029BBD21CC2B45299 /* Pods_rush01.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3438CE12FCAB6F6507365B0D /* Pods-rush01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rush01.debug.xcconfig"; path = "Target Support Files/Pods-rush01/Pods-rush01.debug.xcconfig"; sourceTree = "<group>"; };
+		5114A68029BBD21CC2B45299 /* Pods_rush01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rush01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CA82B0224260490093F599 /* rush01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rush01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CA82B3224260490093F599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77CA82B5224260490093F599 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		77CA82BA224260490093F599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77CA82BD224260490093F599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77CA82BF224260490093F599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35502CDA6BBF24AE37605A2 /* Pods-rush01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rush01.release.xcconfig"; path = "Target Support Files/Pods-rush01/Pods-rush01.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08A8F4A7EC347B09AEBE5E7 /* Pods_rush01.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				77CA82B2224260490093F599 /* rush01 */,
 				77CA82B1224260490093F599 /* Products */,
+				7AB0861F3E03B89A44BB5414 /* Pods */,
+				DB48CB6CC3131CFF94D7D1D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = rush01;
 			sourceTree = "<group>";
 		};
+		7AB0861F3E03B89A44BB5414 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3438CE12FCAB6F6507365B0D /* Pods-rush01.debug.xcconfig */,
+				D35502CDA6BBF24AE37605A2 /* Pods-rush01.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB48CB6CC3131CFF94D7D1D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5114A68029BBD21CC2B45299 /* Pods_rush01.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77CA82C2224260490093F599 /* Build configuration list for PBXNativeTarget "rush01" */;
 			buildPhases = (
+				4770AA3ABC296BF09238B9D0 /* [CP] Check Pods Manifest.lock */,
 				77CA82AC224260490093F599 /* Sources */,
 				77CA82AD224260490093F599 /* Frameworks */,
 				77CA82AE224260490093F599 /* Resources */,
+				EE42A3027623723C4B4DA3E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4770AA3ABC296BF09238B9D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rush01-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE42A3027623723C4B4DA3E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rush01/Pods-rush01-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rush01/Pods-rush01-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77CA82AC224260490093F599 /* Sources */ = {
@@ -272,6 +348,7 @@
 		};
 		77CA82C3224260490093F599 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3438CE12FCAB6F6507365B0D /* Pods-rush01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +363,7 @@
 		};
 		77CA82C4224260490093F599 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35502CDA6BBF24AE37605A2 /* Pods-rush01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
