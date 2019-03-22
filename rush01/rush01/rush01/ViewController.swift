@@ -16,6 +16,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
 
     // initiate Views
     @IBOutlet weak var mapView: GMSMapView!
+
     
     // initiate Location Manager
     var locationManager = CLLocationManager()
@@ -34,7 +35,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     let marker = GMSMarker()
     
     // Autocomplite controler
+    @IBOutlet weak var resultText: UITextView!
     @IBOutlet weak var adressField: UITextField!
+    
     var fetcher: GMSAutocompleteFetcher?
     
     override func viewDidLoad() {
@@ -57,18 +60,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         fetcher = GMSAutocompleteFetcher(bounds: bounds, filter: filter)
         fetcher?.delegate = self
         fetcher?.provide(token)
-//        adressField?.addTarget(self, action: #selector(textFieldDidChange(textField:)),
-//                             for: .editingChanged)
+        adressField?.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .touchDown)
 //        let placeholder = NSAttributedString(string: "Type a query...")
 //        adressField?.attributedPlaceholder = placeholder
         
-//        resultText = UITextView(frame: CGRect(x: 0, y: 65.0,
-//                                              width: view.bounds.size.width,
-//                                              height: view.bounds.size.height - 65.0))
+//        resultText = UITextView(frame: CGRect(x: 0, y: 65.0,width: view.bounds.size.width,height: view.bounds.size.height - 65.0))
 //        resultText?.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
 //        resultText?.text = "No Results"
 //        resultText?.isEditable = false
-//
+//        self.view.addSubview(resultText)
+
         // Geocalization
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -84,9 +85,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    @objc func textFieldDidChange(textField: UITextField) {
-//        fetcher?.sourceTextHasChanged(textField.text!)
-//    }
+    @objc func textFieldDidChange(textField: UITextField) {
+        fetcher?.sourceTextHasChanged(textField.text!)
+        performSegue(withIdentifier: "findAdresse", sender: self)
+        resultText.isHidden = false
+    }
 
     @IBAction func GeoLocalisationButton(_ sender: UIButton) {
         let target = (locationManager.location?.coordinate)!
@@ -119,7 +122,7 @@ extension ViewController: GMSAutocompleteFetcherDelegate {
             resultsStr.appendFormat("Place ID: %@\n", prediction.placeID)
         }
         print(resultsStr)
-//        resultText?.text = resultsStr as String
+        resultText?.text = resultsStr as String
     }
     
     func didFailAutocompleteWithError(_ error: Error) {
