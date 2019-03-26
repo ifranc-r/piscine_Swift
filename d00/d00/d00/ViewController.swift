@@ -122,8 +122,11 @@ class ViewController: UIViewController {
                     Num_Show.text = "Erreur: Max or Min float";
                 }
             }
+            num_calc = 0;
+            operation = String();
+            processMath = true;
+            startOp = true;
         }
-        self.reset();
     }
     
     override func viewDidLoad() {
