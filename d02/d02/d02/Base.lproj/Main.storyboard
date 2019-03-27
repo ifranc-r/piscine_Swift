@@ -19,9 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TabDeathNote" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5dW-Th-fVf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TabDeathNote" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5dW-Th-fVf">
                                 <rect key="frame" x="0.0" y="32" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.92012047770000005" green="0.83393836020000001" blue="0.6404983997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.9201204776763916" green="0.8339383602142334" blue="0.64049839973449707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeathCell" rowHeight="90" id="q9p-MZ-v0g" customClass="DeathTableViewCell" customModule="d02" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
@@ -44,21 +46,22 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" id="Exu-kV-M80"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.73712759067357514" green="0.27584625629385573" blue="0.28140294540321764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of death" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWC-sv-A7B">
-                                                    <rect key="frame" x="255" y="20" width="100" height="20"/>
+                                                    <rect key="frame" x="253.5" y="20" width="101.5" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="5hf-iK-JCe"/>
                                                         <constraint firstAttribute="height" constant="20" id="y6y-LL-9pb"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.76254857512953367" green="0.70118770217914361" blue="0.56003555092912394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="ypF-Ib-Ztr" firstAttribute="trailing" secondItem="tLO-UW-nVv" secondAttribute="trailingMargin" id="0EX-6s-MBy"/>
                                                 <constraint firstItem="eWD-l5-zlo" firstAttribute="top" secondItem="tLO-UW-nVv" secondAttribute="top" constant="18" id="Nh0-ke-qiA"/>
@@ -114,7 +117,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oK-qx-0yd">
                                 <rect key="frame" x="40" y="91" width="295" height="35"/>
-                                <color key="backgroundColor" red="0.75048575129999995" green="0.75048575129999995" blue="0.75048575129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.73071162564766845" green="0.66653887494579045" blue="0.51515470633177962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="w3B-WO-ERE"/>
                                 </constraints>
@@ -124,6 +127,7 @@
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vGs-Fs-bwE">
                                 <rect key="frame" x="0.0" y="131" width="375" height="216"/>
+                                <color key="backgroundColor" red="0.91643255949020386" green="0.82253760099411011" blue="0.59508925676345825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="lhJ-yN-UaH"/>
                                 </constraints>
@@ -133,12 +137,12 @@
                             </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jpd-Sp-CMQ">
                                 <rect key="frame" x="20" y="367" width="335" height="280"/>
-                                <color key="backgroundColor" red="0.75048575129999995" green="0.75048575129999995" blue="0.75048575129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.73071162564766845" green="0.66653887494579045" blue="0.51515470633177962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.91643255949020386" green="0.82253760099411011" blue="0.59508925676345825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qpL-t4-3Fg" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0oK-qx-0yd" secondAttribute="trailing" constant="40" id="0L2-QL-Mb7"/>
                             <constraint firstItem="jpd-Sp-CMQ" firstAttribute="top" secondItem="vGs-Fs-bwE" secondAttribute="bottom" constant="20" id="3mF-YH-e9O"/>
