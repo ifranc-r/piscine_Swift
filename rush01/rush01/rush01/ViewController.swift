@@ -15,8 +15,9 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate  {
 
     // initiate Views
-    @IBOutlet weak var mapView: GMSMapView!
 
+    @IBOutlet weak var mapView: GMSMapView!
+    
     
     // initiate Location Manager
     var locationManager = CLLocationManager()
@@ -78,7 +79,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         locationManager.startUpdatingLocation()
         placesClient = GMSPlacesClient.shared()
 
-        self.mapView.isMyLocationEnabled = true
+//        self.mapView.isMyLocationEnabled = true
         mapView.delegate = self
     }
     override func didReceiveMemoryWarning() {

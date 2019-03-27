@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		773AE4022244ED09004B614B /* TabBarControllerCustum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AE4012244ED09004B614B /* TabBarControllerCustum.swift */; };
+		773AE4042244FB16004B614B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AE4032244FB16004B614B /* MapViewController.swift */; };
+		773AE40622450CBF004B614B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AE40522450CBF004B614B /* SearchViewController.swift */; };
+		773AE40822466322004B614B /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AE40722466322004B614B /* Itinerary.swift */; };
+		773AE40A2246BDF1004B614B /* ItinararyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AE4092246BDF1004B614B /* ItinararyViewController.swift */; };
 		77CA82B4224260490093F599 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CA82B3224260490093F599 /* AppDelegate.swift */; };
 		77CA82B6224260490093F599 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CA82B5224260490093F599 /* ViewController.swift */; };
 		77CA82B9224260490093F599 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CA82B7224260490093F599 /* Main.storyboard */; };
@@ -18,6 +23,11 @@
 /* Begin PBXFileReference section */
 		3438CE12FCAB6F6507365B0D /* Pods-rush01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rush01.debug.xcconfig"; path = "Target Support Files/Pods-rush01/Pods-rush01.debug.xcconfig"; sourceTree = "<group>"; };
 		5114A68029BBD21CC2B45299 /* Pods_rush01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rush01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		773AE4012244ED09004B614B /* TabBarControllerCustum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerCustum.swift; sourceTree = "<group>"; };
+		773AE4032244FB16004B614B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		773AE40522450CBF004B614B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		773AE40722466322004B614B /* Itinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
+		773AE4092246BDF1004B614B /* ItinararyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinararyViewController.swift; sourceTree = "<group>"; };
 		77CA82B0224260490093F599 /* rush01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rush01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CA82B3224260490093F599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77CA82B5224260490093F599 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +77,11 @@
 				77CA82BA224260490093F599 /* Assets.xcassets */,
 				77CA82BC224260490093F599 /* LaunchScreen.storyboard */,
 				77CA82BF224260490093F599 /* Info.plist */,
+				773AE4012244ED09004B614B /* TabBarControllerCustum.swift */,
+				773AE40522450CBF004B614B /* SearchViewController.swift */,
+				773AE4032244FB16004B614B /* MapViewController.swift */,
+				773AE40722466322004B614B /* Itinerary.swift */,
+				773AE4092246BDF1004B614B /* ItinararyViewController.swift */,
 			);
 			path = rush01;
 			sourceTree = "<group>";
@@ -203,8 +218,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773AE40622450CBF004B614B /* SearchViewController.swift in Sources */,
+				773AE40A2246BDF1004B614B /* ItinararyViewController.swift in Sources */,
+				773AE40822466322004B614B /* Itinerary.swift in Sources */,
 				77CA82B6224260490093F599 /* ViewController.swift in Sources */,
+				773AE4022244ED09004B614B /* TabBarControllerCustum.swift in Sources */,
 				77CA82B4224260490093F599 /* AppDelegate.swift in Sources */,
+				773AE4042244FB16004B614B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
