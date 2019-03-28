@@ -30,6 +30,7 @@ open class ConverseResponse: Mappable {
     }
     
     open func mapping(map: Map) {
+//        dump(map)
         uuid <- map["uuid"]
         source <- map["source"]
         replies <- map["replies"]
