@@ -102,7 +102,6 @@ class ViewController: UIViewController {
                 selectShape!.bounds.size = CGSize(width: 100*(sender.scale/lastdist), height: 100*(sender.scale/lastdist))
                 dynamicAnimator.updateItem(usingCurrentState: selectShape!)
                 collision.addItem(selectShape!)
-                
             }
         default:
             if selectShape != nil {

@@ -8,6 +8,7 @@ target 'd07' do
   # Pods for d07
   pod 'RecastAI'
   pod "ForecastIO"
+  pod 'MessageKit'
   target 'd07Tests' do
     inherit! :search_paths
     # Pods for testing

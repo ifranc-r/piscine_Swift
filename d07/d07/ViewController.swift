@@ -10,7 +10,6 @@ import UIKit
 import RecastAI
 import ForecastIO
 
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var LabelMeteo: UILabel!
